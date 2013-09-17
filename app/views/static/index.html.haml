@@ -2,7 +2,7 @@
 %html{ prefix: "og: http://ogp.me/ns#" }
   %head
     %title Fika - More of your time.
-    = stylesheet_link_tag "index"
+    = stylesheet_link_tag    "application", media: "all"
     = csrf_meta_tags
 
     %link{href: "#{asset_path('favicon.png')}", rel: "shortcut icon"}/
