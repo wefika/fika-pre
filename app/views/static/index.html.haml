@@ -2,15 +2,15 @@
 %html
   %head
     %title Fika - More of your time.
-    = stylesheet_link_tag    "index", media: "all"
+    = stylesheet_link_tag "index"
     = csrf_meta_tags
 
     %link{:href => "#{asset_path('favicon.png')}", :rel => "shortcut icon"}/
-    %meta(name="og:title" content="Fika")
-    %meta(name="og:description" content="More of your time")
-    %meta(name="og:type" content="website")
-    %meta(name="og:url" content="http://www.wefika.com")
-    %meta(name="og:image" content="#{asset_path('logo.png')}")
+    %meta(property="og:title" content="Fika")
+    %meta(property="og:description" content="More of your time")
+    %meta(property="og:type" content="website")
+    %meta(property="og:url" content="http://www.wefika.com")
+    %meta(property="og:image" content="#{asset_path('logo.png')}")
 
   %body
     .centered
