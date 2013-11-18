@@ -6,6 +6,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
 
+    %meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
     %link{href: "#{asset_path('favicon.png')}", rel: "shortcut icon"}/
     %meta(property="og:title" content="Fika")/
     %meta(property="og:description" content="More of your time")/
@@ -22,7 +23,11 @@
 
     .popup-container
       .popup
-        = image_tag('close.png', class: 'close-btn')
+        .popup-header
+          = image_tag('close.png', class: 'close-btn')
+          %h1{class: 'terms-logo'}
+            = image_tag 'logo_300.png', class: 'logo'
+            Terms of Use
         .popup-terms
           = render partial: 'static/terms'
 
