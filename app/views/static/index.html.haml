@@ -3,6 +3,7 @@
   %head
     %title Fika - More of your time.
     = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
     = csrf_meta_tags
 
     %link{href: "#{asset_path('favicon.png')}", rel: "shortcut icon"}/
@@ -18,3 +19,13 @@
       = form_tag "http://wefika.us7.list-manage2.com/subscribe/post?u=ed065d37661d54e1b3418a096&amp;id=487f0935b0", method: "post", class: "signup" do
         = text_field_tag "EMAIL", nil, class: "email", placeholder: "enter email address", width: 300, height: 200
         = submit_tag "Sign up", name: "subscribe", class: "btn"
+
+    .popup-container
+      .popup
+        = image_tag('close.png', class: 'close-btn')
+        .popup-terms
+          = render partial: 'static/terms'
+
+    .terms-link
+      Terms of use
+
