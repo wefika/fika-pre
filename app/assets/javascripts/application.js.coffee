@@ -6,6 +6,8 @@
 
 $ ->
   $('.terms-link').click ->
-    $('.popup-container').toggle()
+    $('#terms-popup').toggle()
+  $('.privacy-link').click ->
+    $('#privacy-popup').toggle()
   $('.close-btn').click ->
     $('.popup-container').hide()

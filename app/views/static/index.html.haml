@@ -21,7 +21,12 @@
         = text_field_tag "EMAIL", nil, class: "email", placeholder: "enter email address", width: 300, height: 200
         = submit_tag "Sign up", name: "subscribe", class: "btn"
 
-    .popup-container
+    .links
+      %a{class: 'privacy-link'} Privacy Policy
+      &sdot;
+      %a{class: 'terms-link'} Terms of Use
+
+    .popup-container{id: 'terms-popup'}
       .popup
         .popup-header
           = image_tag('close.png', class: 'close-btn')
@@ -31,6 +36,12 @@
         .popup-terms
           = render partial: 'static/terms'
 
-    .terms-link
-      Terms of use
-
+    .popup-container{id: 'privacy-popup'}
+      .popup
+        .popup-header
+          = image_tag('close.png', class: 'close-btn')
+          %h1{class: 'terms-logo'}
+            = image_tag 'logo_300.png', class: 'logo'
+            Privacy Policy
+        .popup-terms
+          = render partial: 'static/privacy'

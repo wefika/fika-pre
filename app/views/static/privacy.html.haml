@@ -1,7 +1,7 @@
 !!!
 %html{ prefix: "og: http://ogp.me/ns#", class: "terms" }
   %head
-    %title Fika - Terms of Use
+    %title Fika - Privacy Policy
     = stylesheet_link_tag    "application", media: "all"
     = csrf_meta_tags
 
@@ -19,6 +19,6 @@
     .terms-container
       %h1{class: 'terms-logo'}
         = image_tag 'logo_300.png', class: 'logo'
-        Terms of Use
-      = render partial: 'static/terms'
+        Privacy Policy
+      = render partial: 'static/privacy'
 

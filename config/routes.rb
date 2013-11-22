@@ -2,6 +2,7 @@ FikaPre::Application.routes.draw do
 
   root 'static#index'
   get 'terms' => 'static#terms'
+  get 'privacy' => 'static#privacy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
