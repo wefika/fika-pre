@@ -17,15 +17,17 @@
   %body
     .centered
       = image_tag "logo.png", class: 'logo'
+
+      .download
+        = link_to ios_url do
+          = image_tag 'apple.png'
+        = link_to android_url do
+          = image_tag 'google.png'
+
       = form_tag "http://wefika.us7.list-manage2.com/subscribe/post?u=ed065d37661d54e1b3418a096&amp;id=487f0935b0", method: "post", class: "signup" do
         = text_field_tag "EMAIL", nil, class: "email", placeholder: "enter email address", width: 300, height: 200
         = submit_tag "Sign up", name: "subscribe", class: "btn"
 
-        .download
-          = link_to ios_url do
-            = image_tag 'apple.png'
-          = link_to android_url do
-            = image_tag 'google.png'
 
     .links
       %a{class: 'privacy-link'} Privacy Policy
