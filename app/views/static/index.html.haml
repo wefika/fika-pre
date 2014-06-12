@@ -15,28 +15,30 @@
     %meta(property="og:image" content="#{asset_path('logo_fb.png')}")/
 
   %body
-    .centered
-      = image_tag "logo.png", class: 'logo'
+    .table-wrapper
+      .table
+        .centered
+          = image_tag "logo.png", class: 'logo'
 
-      - if ios_url.present? or android_url.present?
-        .download
-          - if ios_url.present?
-            = link_to ios_url do
-              = image_tag 'apple.png'
+          - if ios_url.present? or android_url.present?
+            .download
+              - if ios_url.present?
+                = link_to ios_url do
+                  = image_tag 'apple.png'
 
-          - if android_url.present?
-            = link_to android_url do
-              = image_tag 'google.png'
+              - if android_url.present?
+                = link_to android_url do
+                  = image_tag 'google.png'
 
-      = form_tag "http://wefika.us7.list-manage2.com/subscribe/post?u=ed065d37661d54e1b3418a096&amp;id=487f0935b0", method: "post", class: "signup" do
-        = text_field_tag "EMAIL", nil, class: "email", placeholder: "enter email address", width: 300, height: 200
-        = submit_tag "Sign up", name: "subscribe", class: "btn"
+          = form_tag "http://wefika.us7.list-manage2.com/subscribe/post?u=ed065d37661d54e1b3418a096&amp;id=487f0935b0", method: "post", class: "signup" do
+            = text_field_tag "EMAIL", nil, class: "email", placeholder: "enter email address", width: 300, height: 200
+            = submit_tag "Sign up", name: "subscribe", class: "btn"
 
 
-    .links
-      %a{class: 'privacy-link'} Privacy Policy
-      &sdot;
-      %a{class: 'terms-link'} Terms of Use
+        .links
+          %a{class: 'privacy-link'} Privacy Policy
+          &sdot;
+          %a{class: 'terms-link'} Terms of Use
 
     .popup-container{id: 'terms-popup'}
       .popup
